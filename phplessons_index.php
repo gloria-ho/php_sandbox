@@ -1,7 +1,7 @@
 <?php
 
 /*
-  This
+  this
   is
   a
   multi-line
@@ -38,7 +38,7 @@ echo nl2br($c."\n");
 
 echo "<br>";
 
-// The var_dump function is used to determine the data type. The code below demonstrates how to use the var_dump function.
+// the var_dump function is used to determine the data type. The code below demonstrates how to use the var_dump function.
 $x = 1;
 var_dump($x);
 $y = 1.5;
@@ -47,6 +47,32 @@ $z = "I Love PHP";
 var_dump($z);
 $n = true;
 var_dump($n);
+
+echo "<br>";
+
+// arrays in PHP can be both an array and an object
+// arrays are can be created by declaring the index value
+$my_arr[0] = "Testing array";
+echo nl2br($my_arr[0]."\n");
+$my_arr[0] = "Replacing the value index 0";
+echo nl2br($my_arr[0]."\n");
+
+echo "<br>";
+
+// PHP arrays are 'associative arrays':
+// In computer science, an associative array, map, symbol table, or dictionary is an abstract data type composed of a collection of (key, value) pairs, such that each possible key appears at most once in the collection. Operations associated with this data type allow: the addition of a pair to the collection.
+
+// arrays can also be created by using the 'array(index=>);'' syntax
+// arrays do not need to start at 0
+// but this creates a new array set and overrides any previous declaration of values
+$my_arr = array( 1 => "Adding to array again",
+                 2 => "And again"
+                 );
+
+echo nl2br($my_arr[0]."\n");
+// error: "Undefined offset: 0" ($my_arr[0] does not exist now)
+echo nl2br($my_arr[1]."\n");
+echo nl2br($my_arr[2]."\n");
 
 echo "<br>";
 
