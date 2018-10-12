@@ -8,25 +8,27 @@
     comment
   */
 
-  echo nl2br("Hello World!\n");
   // nl2br() will show line breaks in the html result when using '\n'
-  echo "<br>";
+  echo nl2br("Hello World!\n"); // Hello World!
+
   // a manual html line break can be echoed
-  echo nl2br(PHP_INT_MAX."\n");
+  echo "<br>";
+  echo nl2br(PHP_INT_MAX."\n"); // 9223372036854775807
 
   echo "<br>";
 
-  $my_var = 1;
   // declare variables using '$'
-  // php is case sensitive
-  echo nl2br($my_var."\n");
+  $my_var = 1;
+  echo nl2br($my_var."\n"); // 1
 
   echo "<br>";
 
+  // php is case sensitive
   $MY_VAR = "Hypertext Pre Processor";
-  echo nl2br($MY_VAR."\n");
-  // concatenation in php is done using '.'
 
+  // concatenation in php is done using '.'  
+  echo nl2br($MY_VAR."\n"); // Hypertext Pre Processor
+  
   echo "<br>";
 
   // PHP also allows you to cast the data type. This is known as explicit casting. The code below demonstrates explicit type casting.
@@ -34,20 +36,25 @@
   $b = 1.5;
   $c = $a + $b;
   $c = $a + (int) $b;
-  echo nl2br($c."\n");
+  echo nl2br($c."\n"); // 2
+
 
   echo "<br>";
 
   // the var_dump function is used to determine the data type. The code below demonstrates how to use the var_dump function.
   $x = 1;
-  var_dump($x);
+  var_dump($x); // int(1)
+  echo "<br>";
   $y = 1.5;
-  var_dump($y);
+  var_dump($y); // float(1.5)
+  echo "<br>";
   $z = "I Love PHP";
-  var_dump($z);
+  var_dump($z); // string(10) "I Love PHP"
+  echo "<br>";
   $n = true;
-  var_dump($n);
+  var_dump($n); // bool(true) 
 
+  echo "<br>";
   echo "<br>";
 
   // arrays in PHP can be both an array and an object
@@ -56,9 +63,9 @@
 
   // numeric arrays use a numeric access key to reference a memory slot in an array variable
   $my_arr[0] = "Testing array";
-  echo nl2br($my_arr[0]."\n");
+  echo nl2br($my_arr[0]."\n"); // Testing array
   $my_arr[0] = "Replacing the value index 0";
-  echo nl2br($my_arr[0]."\n");
+  echo nl2br($my_arr[0]."\n"); // Replacing the value index 0
 
   echo "<br>";
 
@@ -67,16 +74,15 @@
 
   // arrays can also be created by using the 'array(index=>);'' syntax
   // arrays do not need to start at 0
-  // but this creates a new array set and overrides any previous declaration of values
+  // but declaring values this way creates a new array set and overrides any previous declaration of values
   $my_arr = array(
     1 => "Adding to array again",
     2 => "And again"
   );
 
-  echo nl2br($my_arr[0]."\n");
-  // error: "Undefined offset: 0" ($my_arr[0] does not exist now)
-  echo nl2br($my_arr[1]."\n");
-  echo nl2br($my_arr[2]."\n");
+  echo nl2br($my_arr[0]."\n"); // Notice: "Undefined offset: 0" ($my_arr[0] does not exist now)
+  echo nl2br($my_arr[1]."\n"); // Adding to array again
+  echo nl2br($my_arr[2]."\n"); // And again
 
   echo "<br>";
 
@@ -100,7 +106,7 @@
     )
   );
 
-  print_r($movies);
+  print_r($movies); // Array ( [comedy] => Array ( [0] => Pink Panther [1] => John English [2] => See No Evil Hear No Evil ) [action] => Array ( [0] => Die Hard [1] => Expendables ) [epic] => Array ( [0] => The Lord of the Rings ) [romance] => Array ( [0] => Romeo and Julet ) ) 
 
   echo "<br>";
   echo "<br>";
@@ -125,11 +131,26 @@
     )
   );
 
-  print_r($films);
-  echo "<br>";
-  echo "<br>";
-  echo $films["comedy"][0];
+  print_r($films); // Array ( [comedy] => Array ( [0] => Pink Panther [1] => John English [2] => See No Evil Hear No Evil ) [action] => Array ( [0] => Die Hard [1] => Expendables ) [epic] => Array ( [0] => The Lord of the Rings ) [romance] => Array ( [0] => Romeo and Juliet ) ) 
 
-  echo "<br>"
+  echo "<br>";
+  echo "<br>";
+  echo $films["comedy"][0]; // Pink Panther
+
+  echo "<br>";
+  echo "<br>";
+
+  $lecturers = array("Mr. Jones", "Mr. Banda", "Mrs. Smith");
+  echo count($lecturers); // 3
+
+  echo "<br>";
+  echo "<br>";
+
+   // is_array function is used to determine if a variable is an array or not
+
+   echo is_array($lecturers); // 1
+
+   echo "<br>";
+   echo "<br>";
 
 ?>
