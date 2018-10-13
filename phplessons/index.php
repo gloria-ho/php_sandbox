@@ -146,11 +146,94 @@
   echo "<br>";
   echo "<br>";
 
-   // is_array function is used to determine if a variable is an array or not
+   // the is_array function is used to determine if a variable is an array or not
 
    echo is_array($lecturers); // 1
 
    echo "<br>";
    echo "<br>";
 
+  // the sort function is used to sort arrays by the values
+  // if the values are alphanumeric, it sorts in alphabetical order
+  // if the values are umeric, it sorts them in ascending order
+  // it removes the existig access keys and adds new numeric keys
+  // the output of this function is a numeric array
+  $persons = array(
+    "Mary" => "Female",
+    "John" => "Male",
+    "Mirriam" => "Female"
+  );
+
+  print_r($persons); // Array ( [Mary] => Female [John] => Male [Mirriam] => Female ) 
+  echo "<br>";
+  echo "<br>";
+  sort($persons);
+  print_r($persons); // Array ( [0] => Female [1] => Female [2] => Male )
+  
+  echo "<br>";
+  echo "<br>";
+
+  // the ksort function is used to sort the array using the key
+
+  $persons = array(
+    "Mary" => "Female",
+    "John" => "Male",
+    "Mirriam" => "Female"
+  );
+
+  ksort($persons);
+  print_r($persons); // Array ( [John] => Male [Mary] => Female [Mirriam] => Female ) 
+
+  echo "<br>";
+  echo "<br>";
+
+  // the asort function is used to sort the array using the value
+
+  $persons = array(
+    "Mary" => "Female",
+    "John" => "Male",
+    "Mirriam" => "Female"
+  );
+
+  asort($persons);
+  print_r($persons); // Array ( [Mary] => Female [Mirriam] => Female [John] => Male ) 
+
+  echo "<br>";
+  echo "<br>";
+
+  // if else statement syntax:
+
+  $if_a = 10;
+  $if_b = 20;
+  if ($if_a > $if_b) {
+    echo "$if_a is greater than $if_b";
+  } else {
+    echo "$if_b is greater than $if_a";
+  }
+
+  echo "<br>";
+  echo "<br>";
+
+  // switch statement syntax:
+  $switch_a = 100;
+  switch ($switch_a){
+    case "0":
+      echo "$switch_a is zero.";
+    break;
+
+    case "1":
+      echo "$switch_a is one.";
+    break;
+
+    default:
+      echo "$switch_a is neither zero or one.";
+      break;
+  }
+
+  echo "<br>";
+  echo "<br>";
+
+  
+  echo "<br>";
+  echo "<br>";
 ?>
