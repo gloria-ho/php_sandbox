@@ -322,9 +322,102 @@
   foreach($persons as $key => $value){
     echo "$key is $value"."<br/>";
   }
+  /*
+    Mary is Female
+    John is Male
+    Mirriam is Female
+  */
 
   
+  echo "<br/>";
+  echo "<br/>";
+
+
+  // while loop syntax:
+  /*
+    while(condition){
+      code block to be executed;
+    }
+  */
+  $while_i = 0;
+  while($while_i < 5){
+    echo $while_i + 1 . "<br/>";
+    $while_i++;
+  }
+  /*
+    1
+    2
+    3
+    4
+    5
+  */
+
 
   echo "<br/>";
   echo "<br/>";
+
+
+  // do while loop will execute at least once before checking if conditon is true
+  $do_while_i = 9;
+  do{
+    echo "$do_while_i" . "<br/>";
+  }
+  while($do_while_i < 9); // 9
+
+
+  echo "<br/>";
+  echo "<br/>";
+
+
+  // strings
+  // single quote can esacpe single apostrophes
+  echo 'I\'m testing the apostrophe.'; // I'm testing the apostrophe.
+  echo "<br/>";
+  $string_name = "Alicia";
+  echo "$string_name is friends with Kalinda"; // Alicia is friends with Kalinda
+  echo "<br/>";
+  // doube quote can escape more special characters
+  
+  $pwd = "pas$word";
+  echo $pwd;
+  /*
+    Notice: Undefined variable: word in opt/lampp/htdocs/phplessons/index.php on line 381
+    pas
+  */  
+  echo "<br/>";
+  $word = "word";
+  $pwd = "pas\$word";
+  echo $pwd; // pas$word
+
+
+  echo "<br/>";
+  echo "<br/>";
+  
+
+  // the heredoc methodology is used to create fairly complex strings as compared to double quotes.
+  // the heredoc supports all the features of double quotes and allows creating string values with more than one line without php string concatenation.
+  // using double quotes to create strings that have multiple lines generates an error.
+  // you can also use double quotes inside without escaping them.
+  // NOTE: the closing delimiter must start on the first colum, no spaces/tabs are allowed in front of it
+  $baby_name = "Shalon";
+  echo <<<EOT
+    When $baby_name was a baby,
+    She used to look like a "boy".
+EOT;
+  // When Shalon was a baby, She used to look like a "boy".
+
+
+  echo "<br/>";
+  echo "<br/>";
+
+  // the nowdoc string creation method is similar to the heredoc method but works like the way single quotes work.
+  // no parsing takes place inside the nowdoc.
+  //nowdoc is ideal when working with raw data that do not need to be parsed.
+  // the code below shows the nowdoc implementation
+  echo <<<'EOT'
+    When $baby_name was a baby,
+    She used to look like a "boy".
+EOT;
+  // When $baby_name was a babys, Whe used to look like a "boy".
+
 ?>
