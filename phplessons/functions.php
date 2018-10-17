@@ -61,7 +61,7 @@
 
 
   //
-  // NUMERIC FUNCTiONS - returns numeric results
+  // NUMERIC FUNCTIONS - returns numeric results
   //
 
   // is_number - accepts an argument and returns true or 1 if it's numberic and false or 0 if it's not

@@ -299,7 +299,7 @@
     "Tiger"
   );
 
-  foreach($animals_list as $array_values){
+  foreach($animals_list as $array_values) {
     echo $array_values . "<br/>";
   }
   /*
@@ -319,7 +319,7 @@
     "Mirriam" =>"Female"
   );
 
-  foreach($persons as $key => $value){
+  foreach($persons as $key => $value) {
     echo "$key is $value"."<br/>";
   }
   /*
