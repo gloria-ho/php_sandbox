@@ -8,6 +8,10 @@
   // STRING FUNCTIONS - manipulate string data
   //
 
+  // str_repeat - repeat the string x times
+  echo str_repeat(".", 13); // .............
+  echo "<br/>";
+
   // strtolower - convert all string characters to lower case letters
   echo strtolower("Gloria"); // gloria
   echo "<br/>";

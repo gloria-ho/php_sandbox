@@ -420,4 +420,6 @@ EOT;
 EOT;
   // When $baby_name was a babys, Whe used to look like a "boy".
 
+$my_arr_1 = array("one", "two", "three");
+echo $my_arr_1[2];
 ?>
